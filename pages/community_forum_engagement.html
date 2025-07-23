@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forum Komunitas - Portal Digital Desa Ngrawan</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fngrawanvi5927back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="bg-background min-h-screen">
+    <!-- Header Navigation -->
+    <header class="bg-white shadow-subtle sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <svg class="h-10 w-10 text-primary" viewBox="0 0 40 40" fill="currentColor">
+                            <path d="M20 2L4 8v12c0 11 7.6 21.3 16 24 8.4-2.7 16-13 16-24V8L20 2zm0 6l12 4.5v9.5c0 8.5-5.8 16.5-12 18.5-6.2-2-12-10-12-18.5v-9.5L20 8z"/>
+                            <circle cx="20" cy="18" r="6" fill="currentColor"/>
+                            <path d="M16 16h8v4h-8z" fill="white"/>
+                        </svg>
+                    </div>
+                    <div class="ml-3">
+                        <h1 class="text-xl font-inter font-bold text-primary">Desa Ngrawan</h1>
+                        <p class="text-sm text-text-secondary">Portal Digital</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="homepage_village_digital_hub.html" class="text-text-primary hover:text-primary transition-colors">
+                        <span class="flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                            </svg>
+                            Beranda
+                        </span>
+                    </a>
+                    <a href="village_profile_heritage.html" class="text-text-primary hover:text-primary transition-colors">
+                        <span class="flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            Profil Desa
+                        </span>
+                    </a>
+                    <a href="news_announcements_center.html" class="text-text-primary hover:text-primary transition-colors">
+                        <span class="flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"/>
+                            </svg>
+                            Berita
+                        </span>
+                    </a>
+                    <a href="cultural_heritage_gallery.html" class="text-text-primary hover:text-primary transition-colors">
+                        <span class="flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"/>
+                            </svg>
+                            Budaya
+                        </span>
+                    </a>
+                    <a href="community_forum_engagement.html" class="text-primary font-semibold border-b-2 border-primary pb-1">
+                        <span class="flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                            </svg>
+                            Forum
+                        </span>
+                    </a>
+                    <a href="village_leadership_contact.html" class="text-text-primary hover:text-primary transition-colors">
+                        <span class="flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                            </svg>
+                            Kontak
+                        </span>
+                    </a>
+                </nav>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-text-primary hover:text-primary" onclick="toggleMobileMenu()">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-surface-300">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="homepage_village_digital_hub.html" class="block px-3 py-2 text-text-primary hover:text-primary hover:bg-surface-100 rounded-md">Beranda</a>
+                <a href="village_profile_heritage.html" class="block px-3 py-2 text-text-primary hover:text-primary hover:bg-surface-100 rounded-md">Profil Desa</a>
+                <a href="news_announcements_center.html" class="block px-3 py-2 text-text-primary hover:text-primary hover:bg-surface-100 rounded-md">Berita</a>
+                <a href="cultural_heritage_gallery.html" class="block px-3 py-2 text-text-primary hover:text-primary hover:bg-surface-100 rounded-md">Budaya</a>
+                <a href="community_forum_engagement.html" class="block px-3 py-2 text-primary font-semibold bg-primary/10 rounded-md">Forum</a>
+                <a href="village_leadership_contact.html" class="block px-3 py-2 text-text-primary hover:text-primary hover:bg-surface-100 rounded-md">Kontak</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-primary text-white py-16">
+        <div class="absolute inset-0 bg-gradient-to-r from-primary to-primary-600 opacity-90"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="flex justify-center mb-6">
+                    <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center">
+                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                        </svg>
+                    </div>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-accent font-bold mb-4">Forum Komunitas Desa</h1>
+                <p class="text-xl text-primary-100 mb-8 max-w-3xl mx-auto">
+                    Ruang digital gotong royong untuk diskusi, kolaborasi, dan pengambilan keputusan bersama demi kemajuan Desa Ngrawan
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="showJoinModal()" class="btn-accent px-8 py-3 text-lg">
+                        <svg class="w-5 h-5 mr-2 inline" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z"/>
+                        </svg>
+                        Bergabung Forum
+                    </button>
+                    <button onclick="showSuggestionModal()" class="btn-secondary px-8 py-3 text-lg">
+                        <svg class="w-5 h-5 mr-2 inline" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                        </svg>
+                        Kirim Saran Anonim
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Forum Statistics -->
+    <section class="py-12 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-inter font-bold text-primary mb-1">247</h3>
+                    <p class="text-text-secondary">Anggota Aktif</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-inter font-bold text-secondary mb-1">89</h3>
+                    <p class="text-text-secondary">Diskusi Aktif</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-inter font-bold text-accent mb-1">34</h3>
+                    <p class="text-text-secondary">Proyek Komunitas</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-success" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-inter font-bold text-success mb-1">156</h3>
+                    <p class="text-text-secondary">Keputusan Tercapai</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Forum Content -->
+    <section class="py-12 bg-background">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-4 gap-8">
+                <!-- Forum Categories Sidebar -->
+                <div class="lg:col-span-1">
+                    <div class="card sticky top-24">
+                        <h3 class="text-lg font-inter font-semibold text-primary mb-4">Kategori Diskusi</h3>
+                        <div class="space-y-2">
+                            <button onclick="filterCategory('all')" class="category-btn w-full text-left px-4 py-3 rounded-lg bg-primary text-white font-semibold">
+                                <svg class="w-5 h-5 mr-3 inline" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                                </svg>
+                                Semua Diskusi
+                            </button>
+                            
+                            <button onclick="filterCategory('development')" class="category-btn w-full text-left px-4 py-3 rounded-lg bg-surface-200 hover:bg-surface-300 text-text-primary transition-colors">
+                                <svg class="w-5 h-5 mr-3 inline" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"/>
+                                </svg>
+                                Pembangunan Desa
+                            </button>
+                            
+                            <button onclick="filterCategory('culture')" class="category-btn w-full text-left px-4 py-3 rounded-lg bg-surface-200 hover:bg-surface-300 text-text-primary transition-colors">
+                                <svg class="w-5 h-5 mr-3 inline" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"/>
+                                </svg>
+                                Acara Budaya
+                            </button>
+                            
+                            <button onclick="filterCategory('community')" class="category-btn w-full text-left px-4 py-3 rounded-lg bg-surface-200 hover:bg-surface-300 text-text-primary transition-colors">
+                                <svg class="w-5 h-5 mr-3 inline" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+                                </svg>
+                                Gotong Royong
+                            </button>
+                            
+                            <button onclick="filterCategory('knowledge')" class="category-btn w-full text-left px-4 py-3 rounded-lg bg-surface-200 hover:bg-surface-300 text-text-primary transition-colors">
+                                <svg class="w-5 h-5 mr-3 inline" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                Berbagi Ilmu
+                            </button>
+                        </div>
+
+                        <!-- WhatsApp Integration -->
+                        <div class="mt-6 p-4 bg-accent/10 rounded-lg border border-accent/20">
+                            <h4 class="font-inter font-semibold text-accent mb-2">Grup WhatsApp Desa</h4>
+                            <p class="text-sm text-text-secondary mb-3">Bergabung dengan grup WhatsApp untuk diskusi cepat</p>
+                            <a href="https://wa.me/6281234567890" class="inline-flex items-center text-accent hover:text-accent-600 font-semibold text-sm">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.085"/>
+                                </svg>
+                                Gabung Grup
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Discussion Threads -->
+                <div class="lg:col-span-3">
+                    <!-- Search and Filter Bar -->
+                    <div class="card mb-6">
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <div class="flex-1">
+                                <div class="relative">
+                                    <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <input type="text" placeholder="Cari diskusi..." class="form-input pl-10" id="searchInput" />
+                                </div>
+                            </div>
+                            <button onclick="showNewTopicModal()" class="btn-primary whitespace-nowrap">
+                                <svg class="w-5 h-5 mr-2 inline" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd"/>
+                                </svg>
+                                Topik Baru
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Pinned Discussions -->
+                    <div class="mb-6">
+                        <h3 class="text-lg font-inter font-semibold text-primary mb-4 flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z"/>
+                            </svg>
+                            Diskusi Penting
+                        </h3>
+                        
+                        <div class="space-y-4">
+                            <!-- Pinned Discussion 1 -->
+                            <div class="card border-l-4 border-accent bg-accent/5">
+                                <div class="flex items-start justify-between">
+                                    <div class="flex-1">
+                                        <div class="flex items-center mb-2">
+                                            <span class="bg-accent text-white text-xs px-2 py-1 rounded-full mr-2">Penting</span>
+                                            <span class="bg-secondary text-white text-xs px-2 py-1 rounded-full">Pembangunan</span>
+                                        </div>
+                                        <h4 class="text-lg font-inter font-semibold text-primary mb-2">
+                                            <a href="javascript:void(0)" class="hover:text-primary-600">Rencana Pembangunan Balai Desa Baru - Masukan Warga</a>
+                                        </h4>
+                                        <p class="text-text-secondary text-sm mb-3">Diskusi mengenai desain dan fasilitas yang dibutuhkan untuk balai desa yang baru. Mari berikan masukan konstruktif untuk kemajuan bersama.</p>
+                                        <div class="flex items-center text-sm text-text-secondary">
+                                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=32&h=32&fit=crop&crop=face" alt="Pak Slamet" class="w-8 h-8 rounded-full mr-3" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                            <span class="mr-4">Pak Slamet Riyadi (Kepala Desa)</span>
+                                            <span class="mr-4">•</span>
+                                            <span class="mr-4">23 Juli 2025</span>
+                                            <span class="mr-4">•</span>
+                                            <span>47 balasan</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center ml-4">
+                                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Pinned Discussion 2 -->
+                            <div class="card border-l-4 border-secondary bg-secondary/5">
+                                <div class="flex items-start justify-between">
+                                    <div class="flex-1">
+                                        <div class="flex items-center mb-2">
+                                            <span class="bg-accent text-white text-xs px-2 py-1 rounded-full mr-2">Penting</span>
+                                            <span class="bg-primary text-white text-xs px-2 py-1 rounded-full">Budaya</span>
+                                        </div>
+                                        <h4 class="text-lg font-inter font-semibold text-primary mb-2">
+                                            <a href="javascript:void(0)" class="hover:text-primary-600">Persiapan Festival Panen Raya 2025</a>
+                                        </h4>
+                                        <p class="text-text-secondary text-sm mb-3">Koordinasi persiapan festival panen raya yang akan diselenggarakan tanggal 25 Juli 2025. Butuh relawan dan koordinator acara.</p>
+                                        <div class="flex items-center text-sm text-text-secondary">
+                                            <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?w=32&h=32&fit=crop&crop=face" alt="Bu Siti" class="w-8 h-8 rounded-full mr-3" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                            <span class="mr-4">Bu Siti Aminah (Ketua PKK)</span>
+                                            <span class="mr-4">•</span>
+                                            <span class="mr-4">22 Juli 2025</span>
+                                            <span class="mr-4">•</span>
+                                            <span>32 balasan</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center ml-4">
+                                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Discussions -->
+                    <div>
+                        <h3 class="text-lg font-inter font-semibold text-primary mb-4 flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                            </svg>
+                            Diskusi Terbaru
+                        </h3>
+                        
+                        <div class="space-y-4" id="discussionList">
+                            <!-- Discussion Thread 1 -->
+                            <div class="card hover:shadow-elevated transition-all duration-300 discussion-item" data-category="community">
+                                <div class="flex items-start justify-between">
+                                    <div class="flex-1">
+                                        <div class="flex items-center mb-2">
+                                            <span class="bg-secondary text-white text-xs px-2 py-1 rounded-full">Gotong Royong</span>
+                                        </div>
+                                        <h4 class="text-lg font-inter font-semibold text-primary mb-2">
+                                            <a href="javascript:void(0)" class="hover:text-primary-600">Kerja Bakti Membersihkan Saluran Air - Minggu Depan</a>
+                                        </h4>
+                                        <p class="text-text-secondary text-sm mb-3">Mengajak seluruh warga untuk bergotong royong membersihkan saluran air di RT 02 dan RT 03. Siapa saja yang bisa ikut?</p>
+                                        <div class="flex items-center text-sm text-text-secondary">
+                                            <img src="https://images.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg?w=32&h=32&fit=crop&crop=face" alt="Pak Budi" class="w-8 h-8 rounded-full mr-3" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                            <span class="mr-4">Pak Budi Santoso</span>
+                                            <span class="mr-4">•</span>
+                                            <span class="mr-4">2 jam lalu</span>
+                                            <span class="mr-4">•</span>
+                                            <span>12 balasan</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col items-center ml-4">
+                                        <button class="text-text-secondary hover:text-accent transition-colors">
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+                                            </svg>
+                                        </button>
+                                        <span class="text-xs text-text-secondary mt-1">8</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Discussion Thread 2 -->
+                            <div class="card hover:shadow-elevated transition-all duration-300 discussion-item" data-category="knowledge">
+                                <div class="flex items-start justify-between">
+                                    <div class="flex-1">
+                                        <div class="flex items-center mb-2">
+                                            <span class="bg-primary text-white text-xs px-2 py-1 rounded-full">Berbagi Ilmu</span>
+                                        </div>
+                                        <h4 class="text-lg font-inter font-semibold text-primary mb-2">
+                                            <a href="javascript:void(0)" class="hover:text-primary-600">Tips Budidaya Padi Organik dari Pak Tani Berpengalaman</a>
+                                        </h4>
+                                        <p class="text-text-secondary text-sm mb-3">Berbagi pengalaman 20 tahun budidaya padi organik. Hasil panen meningkat 30% dengan metode ini. Silakan bertanya!</p>
+                                        <div class="flex items-center text-sm text-text-secondary">
+                                            <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=32&h=32&fit=crop&crop=face" alt="Pak Joko" class="w-8 h-8 rounded-full mr-3" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                            <span class="mr-4">Pak Joko Widodo</span>
+                                            <span class="mr-4">•</span>
+                                            <span class="mr-4">5 jam lalu</span>
+                                            <span class="mr-4">•</span>
+                                            <span>24 balasan</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col items-center ml-4">
+                                        <button class="text-text-secondary hover:text-accent transition-colors">
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+                                            </svg>
+                                        </button>
+                                        <span class="text-xs text-text-secondary mt-1">15</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Discussion Thread 3 -->
+                            <div class="card hover:shadow-elevated transition-all duration-300 discussion-item" data-category="development">
+                                <div class="flex items-start justify-between">
+                                    <div class="flex-1">
+                                        <div class="flex items-center mb-2">
+                                            <span class="bg-accent text-white text-xs px-2 py-1 rounded-full">Pembangunan</span>
+                                        </div>
+                                        <h4 class="text-lg font-inter font-semibold text-primary mb-2">
+                                            <a href="javascript:void(0)" class="hover:text-primary-600">Usulan Pembangunan Taman Bermain Anak di Lapangan Desa</a>
+                                        </h4>
+                                        <p class="text-text-secondary text-sm mb-3">Bagaimana pendapat warga tentang rencana pembangunan taman bermain untuk anak-anak? Mari diskusikan bersama.</p>
+                                        <div class="flex items-center text-sm text-text-secondary">
+                                            <img src="https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg?w=32&h=32&fit=crop&crop=face" alt="Bu Rina" class="w-8 h-8 rounded-full mr-3" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                            <span class="mr-4">Bu Rina Sari</span>
+                                            <span class="mr-4">•</span>
+                                            <span class="mr-4">1 hari lalu</span>
+                                            <span class="mr-4">•</span>
+                                            <span>18 balasan</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col items-center ml-4">
+                                        <button class="text-text-secondary hover:text-accent transition-colors">
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+                                            </svg>
+                                        </button>
+                                        <span class="text-xs text-text-secondary mt-1">11</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Discussion Thread 4 -->
+                            <div class="card hover:shadow-elevated transition-all duration-300 discussion-item" data-category="culture">
+                                <div class="flex items-start justify-between">
+                                    <div class="flex-1">
+                                        <div class="flex items-center mb-2">
+                                            <span class="bg-secondary text-white text-xs px-2 py-1 rounded-full">Budaya</span>
+                                        </div>
+                                        <h4 class="text-lg font-inter font-semibold text-primary mb-2">
+                                            <a href="javascript:void(0)" class="hover:text-primary-600">Mencari Pemuda untuk Belajar Tari Tradisional Ngrawan</a>
+                                        </h4>
+                                        <p class="text-text-secondary text-sm mb-3">Mbah Darmi akan mengajarkan tari tradisional Ngrawan kepada generasi muda. Siapa yang berminat?</p>
+                                        <div class="flex items-center text-sm text-text-secondary">
+                                            <img src="https://images.pixabay.com/photo/2017/06/26/02/47/man-2442565_1280.jpg?w=32&h=32&fit=crop&crop=face" alt="Mas Agus" class="w-8 h-8 rounded-full mr-3" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                            <span class="mr-4">Mas Agus Priyanto</span>
+                                            <span class="mr-4">•</span>
+                                            <span class="mr-4">2 hari lalu</span>
+                                            <span class="mr-4">•</span>
+                                            <span>9 balasan</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col items-center ml-4">
+                                        <button class="text-text-secondary hover:text-accent transition-colors">
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+                                            </svg>
+                                        </button>
+                                        <span class="text-xs text-text-secondary mt-1">6</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Load More Button -->
+                        <div class="text-center mt-8">
+                            <button class="btn-secondary">
+                                <svg class="w-5 h-5 mr-2 inline" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                                Muat Diskusi Lainnya
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Guidelines -->
+    <section class="py-12 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-inter font-bold text-primary mb-4">Panduan Komunitas</h2>
+                <p class="text-text-secondary text-lg">Menjaga keharmonisan dalam diskusi digital</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-inter font-semibold text-primary mb-3">Saling Menghormati</h3>
+                    <p class="text-text-secondary text-sm">Gunakan bahasa yang sopan dan menghargai pendapat setiap warga desa dalam setiap diskusi.</p>
+                </div>
+
+                <div class="card text-center">
+                    <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-inter font-semibold text-primary mb-3">Informasi Akurat</h3>
+                    <p class="text-text-secondary text-sm">Pastikan informasi yang dibagikan benar dan dapat dipertanggungjawabkan untuk menghindari kesalahpahaman.</p>
+                </div>
+
+                <div class="card text-center">
+                    <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-inter font-semibold text-primary mb-3">Gotong Royong Digital</h3>
+                    <p class="text-text-secondary text-sm">Saling membantu dalam diskusi dan kolaborasi untuk kemajuan bersama Desa Ngrawan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-primary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Village Info -->
+                <div>
+                    <div class="flex items-center mb-4">
+                        <svg class="h-8 w-8 text-accent mr-3" viewBox="0 0 40 40" fill="currentColor">
+                            <path d="M20 2L4 8v12c0 11 7.6 21.3 16 24 8.4-2.7 16-13 16-24V8L20 2zm0 6l12 4.5v9.5c0 8.5-5.8 16.5-12 18.5-6.2-2-12-10-12-18.5v-9.5L20 8z"/>
+                            <circle cx="20" cy="18" r="6" fill="currentColor"/>
+                            <path d="M16 16h8v4h-8z" fill="white"/>
+                        </svg>
+                        <div>
+                            <h3 class="text-lg font-inter font-bold">Desa Ngrawan</h3>
+                            <p class="text-sm text-gray-300">Portal Digital</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm">Membangun desa yang maju dengan tetap menjaga nilai-nilai tradisional dan kearifan lokal.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-inter font-semibold mb-4">Tautan Cepat</h4>
+                    <ul class="space-y-2">
+                        <li><a href="village_profile_heritage.html" class="text-gray-300 hover:text-accent transition-colors text-sm">Profil Desa</a></li>
+                        <li><a href="news_announcements_center.html" class="text-gray-300 hover:text-accent transition-colors text-sm">Berita Terkini</a></li>
+                        <li><a href="cultural_heritage_gallery.html" class="text-gray-300 hover:text-accent transition-colors text-sm">Galeri Budaya</a></li>
+                        <li><a href="community_forum_engagement.html" class="text-gray-300 hover:text-accent transition-colors text-sm">Forum Komunitas</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-lg font-inter font-semibold mb-4">Layanan</h4>
+                    <ul class="space-y-2">
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-accent transition-colors text-sm">Surat Keterangan</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-accent transition-colors text-sm">Izin Usaha</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-accent transition-colors text-sm">Pengaduan Online</a></li>
+                        <li><a href="village_leadership_contact.html" class="text-gray-300 hover:text-accent transition-colors text-sm">Kontak Perangkat</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-inter font-semibold mb-4">Kontak</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <svg class="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                            </svg>
+                            <p class="text-gray-300 text-sm">Jl. Raya Ngrawan No. 123<br />Kec. Ngrawan, Kab. Jawa Tengah<br />57XXX</p>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-accent mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                            </svg>
+                            <p class="text-gray-300 text-sm">(0271) 234-5678</p>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-accent mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                            </svg>
+                            <p class="text-gray-300 text-sm">info@desangrawan.id</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+                <p class="text-gray-300 text-sm">© 2025 Desa Ngrawan. Hak Cipta Dilindungi Undang-Undang.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <!-- Join Forum Modal -->
+    <div id="joinModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-md w-full p-6">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-xl font-inter font-semibold text-primary">Bergabung Forum</h3>
+                <button onclick="closeModal('joinModal')" class="text-text-secondary hover:text-text-primary">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+            </div>
+            <form class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-text-primary mb-2">Nama Lengkap</label>
+                    <input type="text" class="form-input" placeholder="Masukkan nama lengkap" />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-text-primary mb-2">NIK</label>
+                    <input type="text" class="form-input" placeholder="Nomor Induk Kependudukan" />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-text-primary mb-2">RT/RW</label>
+                    <input type="text" class="form-input" placeholder="Contoh: RT 02/RW 01" />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-text-primary mb-2">Nomor WhatsApp</label>
+                    <input type="tel" class="form-input" placeholder="08xxxxxxxxxx" />
+                </div>
+                <div class="flex items-start">
+                    <input type="checkbox" class="mt-1 mr-3" required />
+                    <label class="text-sm text-text-secondary">Saya setuju dengan panduan komunitas dan akan menjaga keharmonisan dalam diskusi</label>
+                </div>
+                <button type="submit" class="btn-primary w-full">Daftar Sekarang</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Anonymous Suggestion Modal -->
+    <div id="suggestionModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-md w-full p-6">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-xl font-inter font-semibold text-primary">Saran Anonim</h3>
+                <button onclick="closeModal('suggestionModal')" class="text-text-secondary hover:text-text-primary">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+            </div>
+            <form class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-text-primary mb-2">Kategori</label>
+                    <select class="form-input">
+                        <option>Pilih kategori</option>
+                        <option>Pembangunan Desa</option>
+                        <option>Pelayanan Publik</option>
+                        <option>Keamanan</option>
+                        <option>Lingkungan</option>
+                        <option>Lainnya</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-text-primary mb-2">Saran/Masukan</label>
+                    <textarea class="form-input h-32" placeholder="Tuliskan saran atau masukan Anda..."></textarea>
+                </div>
+                <div class="bg-accent/10 p-4 rounded-lg">
+                    <p class="text-sm text-accent">
+                        <svg class="w-4 h-4 mr-2 inline" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                        </svg>
+                        Identitas Anda akan tetap anonim dan terjaga kerahasiaannya
+                    </p>
+                </div>
+                <button type="submit" class="btn-primary w-full">Kirim Saran</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- New Topic Modal -->
+    <div id="newTopicModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-lg w-full p-6">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-xl font-inter font-semibold text-primary">Buat Topik Baru</h3>
+                <button onclick="closeModal('newTopicModal')" class="text-text-secondary hover:text-text-primary">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+            </div>
+            <form class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-text-primary mb-2">Kategori</label>
+                    <select class="form-input">
+                        <option>Pilih kategori</option>
+                        <option>Pembangunan Desa</option>
+                        <option>Acara Budaya</option>
+                        <option>Gotong Royong</option>
+                        <option>Berbagi Ilmu</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-text-primary mb-2">Judul Diskusi</label>
+                    <input type="text" class="form-input" placeholder="Masukkan judul yang menarik" />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-text-primary mb-2">Deskripsi</label>
+                    <textarea class="form-input h-32" placeholder="Jelaskan topik diskusi Anda..."></textarea>
+                </div>
+                <div class="flex items-start">
+                    <input type="checkbox" class="mt-1 mr-3" />
+                    <label class="text-sm text-text-secondary">Tandai sebagai diskusi penting</label>
+                </div>
+                <button type="submit" class="btn-primary w-full">Buat Diskusi</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        // Modal functions
+        function showJoinModal() {
+            document.getElementById('joinModal').classList.remove('hidden');
+        }
+
+        function showSuggestionModal() {
+            document.getElementById('suggestionModal').classList.remove('hidden');
+        }
+
+        function showNewTopicModal() {
+            document.getElementById('newTopicModal').classList.remove('hidden');
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.add('hidden');
+        }
+
+        // Category filtering
+        function filterCategory(category) {
+            const discussions = document.querySelectorAll('.discussion-item');
+            const categoryButtons = document.querySelectorAll('.category-btn');
+            
+            // Update button styles
+            categoryButtons.forEach(btn => {
+                btn.classList.remove('bg-primary', 'text-white');
+                btn.classList.add('bg-surface-200', 'text-text-primary');
+            });
+            
+            event.target.classList.remove('bg-surface-200', 'text-text-primary');
+            event.target.classList.add('bg-primary', 'text-white');
+            
+            // Filter discussions
+            discussions.forEach(discussion => {
+                if (category === 'all' || discussion.dataset.category === category) {
+                    discussion.style.display = 'block';
+                } else {
+                    discussion.style.display = 'none';
+                }
+            });
+        }
+
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const discussions = document.querySelectorAll('.discussion-item');
+            
+            discussions.forEach(discussion => {
+                const title = discussion.querySelector('h4 a').textContent.toLowerCase();
+                const content = discussion.querySelector('p').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || content.includes(searchTerm)) {
+                    discussion.style.display = 'block';
+                } else {
+                    discussion.style.display = 'none';
+                }
+            });
+        });
+
+        // Close modals when clicking outside
+        window.addEventListener('click', function(e) {
+            const modals = ['joinModal', 'suggestionModal', 'newTopicModal'];
+            modals.forEach(modalId => {
+                const modal = document.getElementById(modalId);
+                if (e.target === modal) {
+                    closeModal(modalId);
+                }
+            });
+        });
+
+        // Like button functionality
+        document.querySelectorAll('.discussion-item button').forEach(button => {
+            button.addEventListener('click', function() {
+                const likeCount = this.nextElementSibling;
+                const currentCount = parseInt(likeCount.textContent);
+                
+                if (this.classList.contains('text-accent')) {
+                    this.classList.remove('text-accent');
+                    this.classList.add('text-text-secondary');
+                    likeCount.textContent = currentCount - 1;
+                } else {
+                    this.classList.remove('text-text-secondary');
+                    this.classList.add('text-accent');
+                    likeCount.textContent = currentCount + 1;
+                }
+            });
+        });
+
+        // Form submissions
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Terima kasih! Data Anda telah dikirim.');
+                const modalId = this.closest('.fixed').id;
+                closeModal(modalId);
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>

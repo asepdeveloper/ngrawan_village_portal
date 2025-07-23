@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kepemimpinan & Kontak - Portal Digital Desa Ngrawan</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fngrawanvi5927back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="bg-background min-h-screen">
+    <!-- Header Navigation -->
+    <header class="bg-white shadow-subtle sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <svg class="h-10 w-10 text-primary" viewBox="0 0 40 40" fill="currentColor">
+                            <path d="M20 2L4 8v12c0 11 7.6 21.3 16 24 8.4-2.7 16-13 16-24V8L20 2zm0 6l12 4.5v9.5c0 8.5-5.8 16.5-12 18.5-6.2-2-12-10-12-18.5v-9.5L20 8z"/>
+                            <circle cx="20" cy="18" r="6" fill="currentColor"/>
+                            <path d="M16 16h8v4h-8z" fill="white"/>
+                        </svg>
+                    </div>
+                    <div class="ml-3">
+                        <h1 class="text-xl font-inter font-bold text-primary">Desa Ngrawan</h1>
+                        <p class="text-sm text-text-secondary">Portal Digital</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="homepage_village_digital_hub.html" class="text-text-primary hover:text-primary transition-colors">
+                        <span class="flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                            </svg>
+                            Beranda
+                        </span>
+                    </a>
+                    <a href="village_profile_heritage.html" class="text-text-primary hover:text-primary transition-colors">
+                        <span class="flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            Profil Desa
+                        </span>
+                    </a>
+                    <a href="news_announcements_center.html" class="text-text-primary hover:text-primary transition-colors">
+                        <span class="flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"/>
+                            </svg>
+                            Berita
+                        </span>
+                    </a>
+                    <a href="cultural_heritage_gallery.html" class="text-text-primary hover:text-primary transition-colors">
+                        <span class="flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"/>
+                            </svg>
+                            Budaya
+                        </span>
+                    </a>
+                    <a href="community_forum_engagement.html" class="text-text-primary hover:text-primary transition-colors">
+                        <span class="flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                            </svg>
+                            Forum
+                        </span>
+                    </a>
+                    <a href="village_leadership_contact.html" class="text-primary font-semibold border-b-2 border-primary pb-1">
+                        <span class="flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                            </svg>
+                            Kontak
+                        </span>
+                    </a>
+                </nav>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-text-primary hover:text-primary" onclick="toggleMobileMenu()">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-surface-300">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="homepage_village_digital_hub.html" class="block px-3 py-2 text-text-primary hover:text-primary hover:bg-surface-100 rounded-md">Beranda</a>
+                <a href="village_profile_heritage.html" class="block px-3 py-2 text-text-primary hover:text-primary hover:bg-surface-100 rounded-md">Profil Desa</a>
+                <a href="news_announcements_center.html" class="block px-3 py-2 text-text-primary hover:text-primary hover:bg-surface-100 rounded-md">Berita</a>
+                <a href="cultural_heritage_gallery.html" class="block px-3 py-2 text-text-primary hover:text-primary hover:bg-surface-100 rounded-md">Budaya</a>
+                <a href="community_forum_engagement.html" class="block px-3 py-2 text-text-primary hover:text-primary hover:bg-surface-100 rounded-md">Forum</a>
+                <a href="village_leadership_contact.html" class="block px-3 py-2 text-primary font-semibold bg-primary/10 rounded-md">Kontak</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-primary text-white py-16">
+        <div class="absolute inset-0 bg-gradient-to-r from-primary to-primary-600"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="flex justify-center mb-6">
+                    <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center">
+                        <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                        </svg>
+                    </div>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-accent font-bold mb-4">Kepemimpinan Desa Ngrawan</h1>
+                <p class="text-xl text-primary-100 mb-8 max-w-3xl mx-auto">Transparansi dan keterbukaan dalam melayani masyarakat dengan dedikasi penuh untuk kemajuan desa</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#leadership-directory" class="btn-accent">Direktori Pimpinan</a>
+                    <a href="#contact-methods" class="bg-white text-primary px-6 py-3 rounded-lg font-inter font-semibold hover:bg-primary-50 transition-colors">Hubungi Kami</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Contact Bar -->
+    <section class="bg-accent py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between text-white">
+                <div class="flex items-center mb-2 md:mb-0">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.293l-3-3a1 1 0 00-1.414 1.414L10.586 9.5H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="font-semibold">Layanan Darurat 24/7:</span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="tel:+6281234567890" class="flex items-center hover:text-accent-100 transition-colors">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                        </svg>
+                        +62 812-3456-7890
+                    </a>
+                    <a href="https://wa.me/6281234567890" class="flex items-center hover:text-accent-100 transition-colors">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.085"/>
+                        </svg>
+                        WhatsApp Darurat
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Directory -->
+    <section id="leadership-directory" class="py-16 bg-background">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-inter font-bold text-primary mb-4">Direktori Kepemimpinan</h2>
+                <p class="text-text-secondary text-lg max-w-3xl mx-auto">Struktur organisasi pemerintahan Desa Ngrawan berdasarkan Undang-Undang Desa dengan komitmen transparansi dan pelayanan terbaik</p>
+            </div>
+
+            <!-- Village Head -->
+            <div class="mb-12">
+                <div class="card bg-white border-l-4 border-primary">
+                    <div class="flex flex-col lg:flex-row items-start lg:items-center gap-6">
+                        <div class="flex-shrink-0">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Kepala Desa Ngrawan" class="w-32 h-32 object-cover rounded-full border-4 border-primary" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
+                                <div>
+                                    <h3 class="text-2xl font-inter font-bold text-primary mb-1">Bapak Suharto Wijaya</h3>
+                                    <p class="text-accent font-semibold text-lg mb-2">Kepala Desa Ngrawan</p>
+                                    <p class="text-text-secondary">Masa Jabatan: 2019 - 2025 (Periode II)</p>
+                                </div>
+                                <div class="flex flex-col sm:flex-row gap-3 mt-4 lg:mt-0">
+                                    <a href="tel:+6281234567891" class="btn-primary text-sm">
+                                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                                        </svg>
+                                        Telepon
+                                    </a>
+                                    <a href="https://wa.me/6281234567891" class="btn-secondary text-sm">
+                                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.085"/>
+                                        </svg>
+                                        WhatsApp
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <h4 class="font-inter font-semibold text-primary mb-3">Tanggung Jawab Utama:</h4>
+                                    <ul class="text-text-secondary text-sm space-y-1">
+                                        <li>• Memimpin penyelenggaraan pemerintahan desa</li>
+                                        <li>• Melaksanakan pembangunan dan pemberdayaan masyarakat</li>
+                                        <li>• Membina ketentraman dan ketertiban masyarakat</li>
+                                        <li>• Memelihara prasarana dan fasilitas pelayanan umum</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-inter font-semibold text-primary mb-3">Jam Pelayanan:</h4>
+                                    <div class="text-text-secondary text-sm space-y-1">
+                                        <p><strong>Senin - Jumat:</strong> 08.00 - 16.00 WIB</p>
+                                        <p><strong>Sabtu:</strong> 08.00 - 12.00 WIB (Konsultasi)</p>
+                                        <p><strong>Darurat:</strong> 24/7 via WhatsApp</p>
+                                        <p><strong>Email:</strong> kepaladesa@desangrawan.id</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Department Heads -->
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Village Secretary -->
+                <div class="card bg-white">
+                    <div class="flex items-start gap-4 mb-4">
+                        <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Sekretaris Desa" class="w-20 h-20 object-cover rounded-full border-2 border-secondary" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div class="flex-1">
+                            <h3 class="text-lg font-inter font-bold text-primary">Ibu Siti Nurhasanah</h3>
+                            <p class="text-secondary font-semibold">Sekretaris Desa</p>
+                            <p class="text-text-secondary text-sm">Administrasi & Tata Usaha</p>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <div>
+                            <h4 class="font-semibold text-primary text-sm mb-2">Bidang Tugas:</h4>
+                            <ul class="text-text-secondary text-xs space-y-1">
+                                <li>• Pengelolaan administrasi pemerintahan</li>
+                                <li>• Koordinasi pelaksanaan tugas perangkat desa</li>
+                                <li>• Pengelolaan keuangan dan aset desa</li>
+                            </ul>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="tel:+6281234567892" class="flex-1 bg-secondary text-white px-3 py-2 rounded text-xs text-center hover:bg-secondary-600 transition-colors">
+                                <svg class="w-3 h-3 inline mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                                </svg>
+                                Telepon
+                            </a>
+                            <a href="https://wa.me/6281234567892" class="flex-1 bg-accent text-white px-3 py-2 rounded text-xs text-center hover:bg-accent-600 transition-colors">
+                                <svg class="w-3 h-3 inline mr-1" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.085"/>
+                                </svg>
+                                WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Head of Development -->
+                <div class="card bg-white">
+                    <div class="flex items-start gap-4 mb-4">
+                        <img src="https://images.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg" alt="Kepala Urusan Pembangunan" class="w-20 h-20 object-cover rounded-full border-2 border-accent" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div class="flex-1">
+                            <h3 class="text-lg font-inter font-bold text-primary">Bapak Ahmad Fauzi</h3>
+                            <p class="text-accent font-semibold">Kepala Urusan Pembangunan</p>
+                            <p class="text-text-secondary text-sm">Infrastruktur & Pemberdayaan</p>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <div>
+                            <h4 class="font-semibold text-primary text-sm mb-2">Bidang Tugas:</h4>
+                            <ul class="text-text-secondary text-xs space-y-1">
+                                <li>• Perencanaan dan pelaksanaan pembangunan</li>
+                                <li>• Pemberdayaan masyarakat dan ekonomi</li>
+                                <li>• Pengelolaan infrastruktur desa</li>
+                            </ul>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="tel:+6281234567893" class="flex-1 bg-accent text-white px-3 py-2 rounded text-xs text-center hover:bg-accent-600 transition-colors">
+                                <svg class="w-3 h-3 inline mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                                </svg>
+                                Telepon
+                            </a>
+                            <a href="https://wa.me/6281234567893" class="flex-1 bg-secondary text-white px-3 py-2 rounded text-xs text-center hover:bg-secondary-600 transition-colors">
+                                <svg class="w-3 h-3 inline mr-1" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.085"/>
+                                </svg>
+                                WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Head of Welfare -->
+                <div class="card bg-white">
+                    <div class="flex items-start gap-4 mb-4">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616c9c0e5c3?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Kepala Urusan Kesejahteraan" class="w-20 h-20 object-cover rounded-full border-2 border-primary" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div class="flex-1">
+                            <h3 class="text-lg font-inter font-bold text-primary">Ibu Ratna Sari</h3>
+                            <p class="text-primary font-semibold">Kepala Urusan Kesejahteraan</p>
+                            <p class="text-text-secondary text-sm">Sosial & Kemasyarakatan</p>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <div>
+                            <h4 class="font-semibold text-primary text-sm mb-2">Bidang Tugas:</h4>
+                            <ul class="text-text-secondary text-xs space-y-1">
+                                <li>• Penyelenggaraan kegiatan kemasyarakatan</li>
+                                <li>• Pelayanan sosial dan kesehatan</li>
+                                <li>• Pembinaan lembaga kemasyarakatan</li>
+                            </ul>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="tel:+6281234567894" class="flex-1 bg-primary text-white px-3 py-2 rounded text-xs text-center hover:bg-primary-600 transition-colors">
+                                <svg class="w-3 h-3 inline mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                                </svg>
+                                Telepon
+                            </a>
+                            <a href="https://wa.me/6281234567894" class="flex-1 bg-accent text-white px-3 py-2 rounded text-xs text-center hover:bg-accent-600 transition-colors">
+                                <svg class="w-3 h-3 inline mr-1" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.085"/>
+                                </svg>
+                                WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Head of General Affairs -->
+                <div class="card bg-white">
+                    <div class="flex items-start gap-4 mb-4">
+                        <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Kepala Urusan Umum" class="w-20 h-20 object-cover rounded-full border-2 border-secondary" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div class="flex-1">
+                            <h3 class="text-lg font-inter font-bold text-primary">Bapak Bambang Sutrisno</h3>
+                            <p class="text-secondary font-semibold">Kepala Urusan Umum</p>
+                            <p class="text-text-secondary text-sm">Pelayanan & Keamanan</p>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <div>
+                            <h4 class="font-semibold text-primary text-sm mb-2">Bidang Tugas:</h4>
+                            <ul class="text-text-secondary text-xs space-y-1">
+                                <li>• Pelayanan umum dan perizinan</li>
+                                <li>• Keamanan dan ketertiban desa</li>
+                                <li>• Pengelolaan data kependudukan</li>
+                            </ul>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="tel:+6281234567895" class="flex-1 bg-secondary text-white px-3 py-2 rounded text-xs text-center hover:bg-secondary-600 transition-colors">
+                                <svg class="w-3 h-3 inline mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                                </svg>
+                                Telepon
+                            </a>
+                            <a href="https://wa.me/6281234567895" class="flex-1 bg-accent text-white px-3 py-2 rounded text-xs text-center hover:bg-accent-600 transition-colors">
+                                <svg class="w-3 h-3 inline mr-1" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.085"/>
+                                </svg>
+                                WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Organizational Structure -->
+    <section class="py-16 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-inter font-bold text-primary mb-4">Struktur Organisasi</h2>
+                <p class="text-text-secondary text-lg">Hierarki pemerintahan desa sesuai dengan peraturan perundang-undangan</p>
+            </div>
+
+            <div class="bg-white rounded-lg p-8 shadow-card">
+                <div class="text-center mb-8">
+                    <div class="inline-block bg-primary text-white px-6 py-3 rounded-lg font-inter font-semibold">
+                        Kepala Desa
+                    </div>
+                </div>
+
+                <div class="flex justify-center mb-6">
+                    <div class="w-px h-12 bg-surface-400"></div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6 mb-8">
+                    <div class="text-center">
+                        <div class="bg-secondary text-white px-4 py-2 rounded-lg font-inter font-semibold text-sm mb-2">
+                            Sekretaris Desa
+                        </div>
+                        <p class="text-text-secondary text-xs">Administrasi & Koordinasi</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-accent text-white px-4 py-2 rounded-lg font-inter font-semibold text-sm mb-2">
+                            Kepala Urusan Pembangunan
+                        </div>
+                        <p class="text-text-secondary text-xs">Infrastruktur & Pemberdayaan</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-primary text-white px-4 py-2 rounded-lg font-inter font-semibold text-sm mb-2">
+                            Kepala Urusan Kesejahteraan
+                        </div>
+                        <p class="text-text-secondary text-xs">Sosial & Kemasyarakatan</p>
+                    </div>
+                </div>
+
+                <div class="flex justify-center mb-6">
+                    <div class="w-px h-8 bg-surface-400"></div>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-4">
+                    <div class="text-center">
+                        <div class="bg-surface-400 text-text-primary px-3 py-2 rounded text-xs font-semibold">
+                            Kepala Dusun Krajan
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-surface-400 text-text-primary px-3 py-2 rounded text-xs font-semibold">
+                            Kepala Dusun Tengah
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-surface-400 text-text-primary px-3 py-2 rounded text-xs font-semibold">
+                            Kepala Dusun Timur
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-surface-400 text-text-primary px-3 py-2 rounded text-xs font-semibold">
+                            Kepala Dusun Barat
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meeting Schedule -->
+    <section class="py-16 bg-background">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-inter font-bold text-primary mb-4">Jadwal Pertemuan</h2>
+                <p class="text-text-secondary text-lg">Agenda rutin dan konsultasi masyarakat dengan pemerintah desa</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Regular Meetings -->
+                <div class="card bg-white">
+                    <div class="flex items-center mb-6">
+                        <svg class="w-6 h-6 text-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                        </svg>
+                        <h3 class="text-xl font-inter font-semibold text-primary">Pertemuan Rutin</h3>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="border-l-4 border-primary pl-4">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold text-primary">Musyawarah Desa Bulanan</h4>
+                                <span class="text-xs bg-primary text-white px-2 py-1 rounded-full">Minggu Terakhir</span>
+                            </div>
+                            <p class="text-text-secondary text-sm mb-2">Pembahasan program pembangunan dan aspirasi warga</p>
+                            <div class="flex items-center text-text-secondary text-xs">
+                                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                                </svg>
+                                Setiap hari Minggu terakhir, 19.30 WIB
+                            </div>
+                        </div>
+
+                        <div class="border-l-4 border-secondary pl-4">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold text-primary">Rapat Koordinasi Perangkat</h4>
+                                <span class="text-xs bg-secondary text-white px-2 py-1 rounded-full">Mingguan</span>
+                            </div>
+                            <p class="text-text-secondary text-sm mb-2">Evaluasi program dan koordinasi antar bidang</p>
+                            <div class="flex items-center text-text-secondary text-xs">
+                                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                                </svg>
+                                Setiap hari Senin, 08.00 WIB
+                            </div>
+                        </div>
+
+                        <div class="border-l-4 border-accent pl-4">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold text-primary">Konsultasi Publik</h4>
+                                <span class="text-xs bg-accent text-white px-2 py-1 rounded-full">Mingguan</span>
+                            </div>
+                            <p class="text-text-secondary text-sm mb-2">Jam konsultasi terbuka untuk warga</p>
+                            <div class="flex items-center text-text-secondary text-xs">
+                                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                                </svg>
+                                Setiap hari Sabtu, 09.00 - 12.00 WIB
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upcoming Meetings -->
+                <div class="card bg-white">
+                    <div class="flex items-center mb-6">
+                        <svg class="w-6 h-6 text-accent mr-3" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                        </svg>
+                        <h3 class="text-xl font-inter font-semibold text-primary">Agenda Mendatang</h3>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="cultural-accent">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold text-primary">Musyawarah Perencanaan Pembangunan</h4>
+                                <span class="text-xs bg-primary text-white px-2 py-1 rounded-full">28 Jul</span>
+                            </div>
+                            <p class="text-text-secondary text-sm mb-2">Penyusunan RKPDes 2026 dan prioritas pembangunan</p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center text-text-secondary text-xs">
+                                    <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    Balai Desa, 19.30 WIB
+                                </div>
+                                <button class="text-accent hover:text-accent-600 text-xs font-semibold" onclick="bookAppointment('musrenbang')">Daftar Hadir</button>
+                            </div>
+                        </div>
+
+                        <div class="border-l-4 border-secondary pl-4">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold text-primary">Evaluasi Program BUMDES</h4>
+                                <span class="text-xs bg-secondary text-white px-2 py-1 rounded-full">02 Agu</span>
+                            </div>
+                            <p class="text-text-secondary text-sm mb-2">Review kinerja dan rencana pengembangan BUMDES</p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center text-text-secondary text-xs">
+                                    <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    Kantor BUMDES, 14.00 WIB
+                                </div>
+                                <button class="text-secondary hover:text-secondary-600 text-xs font-semibold" onclick="bookAppointment('bumdes')">Daftar Hadir</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-surface-300">
+                        <button class="w-full btn-primary text-sm" onclick="showMeetingCalendar()">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                            </svg>
+                            Lihat Kalender Lengkap
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Methods -->
+    <section id="contact-methods" class="py-16 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-inter font-bold text-primary mb-4">Metode Kontak</h2>
+                <p class="text-text-secondary text-lg">Berbagai cara untuk menghubungi pemerintah desa dengan mudah dan cepat</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <!-- Phone Contact -->
+                <div class="card bg-white text-center hover:shadow-elevated transition-all duration-300">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-inter font-semibold text-primary mb-2">Telepon Kantor</h3>
+                    <p class="text-text-secondary text-sm mb-4">Hubungi langsung kantor desa untuk keperluan administrasi</p>
+                    <div class="space-y-2 mb-4">
+                        <p class="text-text-primary font-semibold">(0271) 234-5678</p>
+                        <p class="text-text-secondary text-sm">Senin - Jumat: 08.00 - 16.00 WIB</p>
+                        <p class="text-text-secondary text-sm">Sabtu: 08.00 - 12.00 WIB</p>
+                    </div>
+                    <a href="tel:+622712345678" class="btn-primary w-full">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                        </svg>
+                        Telepon Sekarang
+                    </a>
+                </div>
+
+                <!-- WhatsApp Contact -->
+                <div class="card bg-white text-center hover:shadow-elevated transition-all duration-300">
+                    <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-secondary" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.085"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-inter font-semibold text-primary mb-2">WhatsApp Resmi</h3>
+                    <p class="text-text-secondary text-sm mb-4">Chat langsung dengan perangkat desa untuk respon cepat</p>
+                    <div class="space-y-2 mb-4">
+                        <p class="text-text-primary font-semibold">+62 812-3456-7890</p>
+                        <p class="text-text-secondary text-sm">Tersedia 24/7 untuk darurat</p>
+                        <p class="text-text-secondary text-sm">Respon dalam 1-2 jam kerja</p>
+                    </div>
+                    <a href="https://wa.me/6281234567890" class="btn-secondary w-full">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.085"/>
+                        </svg>
+                        Chat WhatsApp
+                    </a>
+                </div>
+
+                <!-- Email Contact -->
+                <div class="card bg-white text-center hover:shadow-elevated transition-all duration-300">
+                    <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-inter font-semibold text-primary mb-2">Email Resmi</h3>
+                    <p class="text-text-secondary text-sm mb-4">Untuk keperluan formal dan dokumentasi resmi</p>
+                    <div class="space-y-2 mb-4">
+                        <p class="text-text-primary font-semibold">info@desangrawan.id</p>
+                        <p class="text-text-secondary text-sm">Respon dalam 1-3 hari kerja</p>
+                        <p class="text-text-secondary text-sm">Untuk surat resmi dan pengaduan</p>
+                    </div>
+                    <a href="mailto:info@desangrawan.id" class="btn-accent w-full">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                        </svg>
+                        Kirim Email
+                    </a>
+                </div>
+            </div>
+
+            <!-- Appointment Booking -->
+            <div class="card bg-white">
+                <div class="text-center mb-8">
+                    <h3 class="text-2xl font-inter font-bold text-primary mb-4">Booking Janji Temu</h3>
+                    <p class="text-text-secondary">Jadwalkan pertemuan dengan perangkat desa untuk konsultasi pribadi</p>
+                </div>
+
+                <form class="grid md:grid-cols-2 gap-6" onsubmit="submitAppointment(event)">
+                    <div>
+                        <label class="block text-sm font-semibold text-primary mb-2">Nama Lengkap</label>
+                        <input type="text" class="form-input" placeholder="Masukkan nama lengkap Anda" required />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-primary mb-2">Nomor WhatsApp</label>
+                        <input type="tel" class="form-input" placeholder="08xxxxxxxxxx" required />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-primary mb-2">Pilih Perangkat Desa</label>
+                        <select class="form-input" required>
+                            <option value>Pilih perangkat yang ingin ditemui</option>
+                            <option value="kepala-desa">Kepala Desa - Bapak Suharto Wijaya</option>
+                            <option value="sekretaris">Sekretaris Desa - Ibu Siti Nurhasanah</option>
+                            <option value="pembangunan">Kepala Urusan Pembangunan - Bapak Ahmad Fauzi</option>
+                            <option value="kesejahteraan">Kepala Urusan Kesejahteraan - Ibu Ratna Sari</option>
+                            <option value="umum">Kepala Urusan Umum - Bapak Bambang Sutrisno</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-primary mb-2">Tanggal & Waktu</label>
+                        <input type="datetime-local" class="form-input" required />
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="block text-sm font-semibold text-primary mb-2">Keperluan</label>
+                        <textarea class="form-input" rows="4" placeholder="Jelaskan keperluan Anda secara singkat" required></textarea>
+                    </div>
+                    <div class="md:col-span-2 text-center">
+                        <button type="submit" class="btn-primary px-8">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                            </svg>
+                            Ajukan Janji Temu
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Commitment -->
+    <section class="py-16 bg-background">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-inter font-bold text-primary mb-4">Komitmen Pelayanan</h2>
+                <p class="text-text-secondary text-lg">Standar kualitas dan transparansi dalam melayani masyarakat</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Response Time -->
+                <div class="card bg-white text-center">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-inter font-semibold text-primary mb-2">Waktu Respon</h3>
+                    <p class="text-2xl font-bold text-accent mb-1">< 2 Jam</p>
+                    <p class="text-text-secondary text-sm">WhatsApp & Telepon</p>
+                </div>
+
+                <!-- Service Hours -->
+                <div class="card bg-white text-center">
+                    <div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-inter font-semibold text-primary mb-2">Jam Layanan</h3>
+                    <p class="text-2xl font-bold text-secondary mb-1">54 Jam</p>
+                    <p class="text-text-secondary text-sm">Per Minggu</p>
+                </div>
+
+                <!-- Satisfaction Rate -->
+                <div class="card bg-white text-center">
+                    <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-inter font-semibold text-primary mb-2">Kepuasan</h3>
+                    <p class="text-2xl font-bold text-accent mb-1">94%</p>
+                    <p class="text-text-secondary text-sm">Rating Warga</p>
+                </div>
+
+                <!-- Transparency -->
+                <div class="card bg-white text-center">
+                    <div class="w-12 h-12 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-success" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-inter font-semibold text-primary mb-2">Transparansi</h3>
+                    <p class="text-2xl font-bold text-success mb-1">100%</p>
+                    <p class="text-text-secondary text-sm">Keterbukaan Info</p>
+                </div>
+            </div>
+
+            <!-- Feedback Section -->
+            <div class="mt-12 card bg-white">
+                <div class="text-center mb-6">
+                    <h3 class="text-xl font-inter font-semibold text-primary mb-2">Berikan Feedback</h3>
+                    <p class="text-text-secondary">Bantu kami meningkatkan kualitas pelayanan dengan masukan Anda</p>
+                </div>
+
+                <form class="grid md:grid-cols-2 gap-6" onsubmit="submitFeedback(event)">
+                    <div>
+                        <label class="block text-sm font-semibold text-primary mb-2">Nama (Opsional)</label>
+                        <input type="text" class="form-input" placeholder="Nama Anda" />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-primary mb-2">Rating Pelayanan</label>
+                        <select class="form-input" required>
+                            <option value>Pilih rating</option>
+                            <option value="5">⭐⭐⭐⭐⭐ Sangat Baik</option>
+                            <option value="4">⭐⭐⭐⭐ Baik</option>
+                            <option value="3">⭐⭐⭐ Cukup</option>
+                            <option value="2">⭐⭐ Kurang</option>
+                            <option value="1">⭐ Sangat Kurang</option>
+                        </select>
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="block text-sm font-semibold text-primary mb-2">Saran & Masukan</label>
+                        <textarea class="form-input" rows="4" placeholder="Bagikan pengalaman dan saran Anda untuk perbaikan pelayanan" required></textarea>
+                    </div>
+                    <div class="md:col-span-2 text-center">
+                        <button type="submit" class="btn-accent px-8">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                            </svg>
+                            Kirim Feedback
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-primary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Village Info -->
+                <div>
+                    <div class="flex items-center mb-4">
+                        <svg class="h-8 w-8 text-accent mr-3" viewBox="0 0 40 40" fill="currentColor">
+                            <path d="M20 2L4 8v12c0 11 7.6 21.3 16 24 8.4-2.7 16-13 16-24V8L20 2zm0 6l12 4.5v9.5c0 8.5-5.8 16.5-12 18.5-6.2-2-12-10-12-18.5v-9.5L20 8z"/>
+                            <circle cx="20" cy="18" r="6" fill="currentColor"/>
+                            <path d="M16 16h8v4h-8z" fill="white"/>
+                        </svg>
+                        <div>
+                            <h3 class="text-lg font-inter font-bold">Desa Ngrawan</h3>
+                            <p class="text-sm text-gray-300">Portal Digital</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm">Membangun desa yang maju dengan tetap menjaga nilai-nilai tradisional dan kearifan lokal.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-inter font-semibold mb-4">Tautan Cepat</h4>
+                    <ul class="space-y-2">
+                        <li><a href="village_profile_heritage.html" class="text-gray-300 hover:text-accent transition-colors text-sm">Profil Desa</a></li>
+                        <li><a href="news_announcements_center.html" class="text-gray-300 hover:text-accent transition-colors text-sm">Berita Terkini</a></li>
+                        <li><a href="cultural_heritage_gallery.html" class="text-gray-300 hover:text-accent transition-colors text-sm">Galeri Budaya</a></li>
+                        <li><a href="community_forum_engagement.html" class="text-gray-300 hover:text-accent transition-colors text-sm">Forum Komunitas</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-lg font-inter font-semibold mb-4">Layanan</h4>
+                    <ul class="space-y-2">
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-accent transition-colors text-sm">Surat Keterangan</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-accent transition-colors text-sm">Izin Usaha</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-accent transition-colors text-sm">Pengaduan Online</a></li>
+                        <li><a href="village_leadership_contact.html" class="text-gray-300 hover:text-accent transition-colors text-sm">Kontak Perangkat</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-inter font-semibold mb-4">Kontak</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <svg class="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                            </svg>
+                            <p class="text-gray-300 text-sm">Jl. Raya Ngrawan No. 123<br />Kec. Ngrawan, Kab. Jawa Tengah<br />57XXX</p>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-accent mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                            </svg>
+                            <p class="text-gray-300 text-sm">(0271) 234-5678</p>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-accent mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                            </svg>
+                            <p class="text-gray-300 text-sm">info@desangrawan.id</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+                <p class="text-gray-300 text-sm">© 2025 Desa Ngrawan. Hak Cipta Dilindungi Undang-Undang.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        // Appointment booking functions
+        function bookAppointment(type) {
+            alert(`Pendaftaran untuk ${type} akan segera dibuka. Silakan hubungi WhatsApp untuk sementara.`);
+        }
+
+        function showMeetingCalendar() {
+            alert('Kalender pertemuan lengkap akan segera tersedia. Hubungi kantor desa untuk informasi terkini.');
+        }
+
+        // Form submission handlers
+        function submitAppointment(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+            
+            // Simulate form submission
+            alert('Permohonan janji temu Anda telah diterima! Kami akan menghubungi Anda melalui WhatsApp untuk konfirmasi jadwal.');
+            
+            // Reset form
+            event.target.reset();
+        }
+
+        function submitFeedback(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+            
+            // Simulate form submission
+            alert('Terima kasih atas feedback Anda! Masukan Anda sangat berharga untuk meningkatkan kualitas pelayanan kami.');
+            
+            // Reset form
+            event.target.reset();
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add loading animation for images
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('load', function() {
+                this.style.opacity = '1';
+            });
+        });
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add fade-in animation to cards
+            const cards = document.querySelectorAll('.card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>

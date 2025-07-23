@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil & Warisan Desa - Portal Digital Desa Ngrawan</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fngrawanvi5927back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="bg-background min-h-screen">
+    <!-- Header Navigation -->
+    <header class="bg-white shadow-subtle sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <svg class="h-10 w-10 text-primary" viewBox="0 0 40 40" fill="currentColor">
+                            <path d="M20 2L4 8v12c0 11 7.6 21.3 16 24 8.4-2.7 16-13 16-24V8L20 2zm0 6l12 4.5v9.5c0 8.5-5.8 16.5-12 18.5-6.2-2-12-10-12-18.5v-9.5L20 8z"/>
+                            <circle cx="20" cy="18" r="6" fill="currentColor"/>
+                            <path d="M16 16h8v4h-8z" fill="white"/>
+                        </svg>
+                    </div>
+                    <div class="ml-3">
+                        <h1 class="text-xl font-inter font-bold text-primary">Desa Ngrawan</h1>
+                        <p class="text-sm text-text-secondary">Portal Digital</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="homepage_village_digital_hub.html" class="text-text-primary hover:text-primary transition-colors">
+                        <span class="flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                            </svg>
+                            Beranda
+                        </span>
+                    </a>
+                    <a href="village_profile_heritage.html" class="text-primary font-semibold border-b-2 border-primary pb-1">
+                        <span class="flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            Profil Desa
+                        </span>
+                    </a>
+                    <a href="news_announcements_center.html" class="text-text-primary hover:text-primary transition-colors">
+                        <span class="flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"/>
+                            </svg>
+                            Berita
+                        </span>
+                    </a>
+                    <a href="cultural_heritage_gallery.html" class="text-text-primary hover:text-primary transition-colors">
+                        <span class="flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"/>
+                            </svg>
+                            Budaya
+                        </span>
+                    </a>
+                    <a href="community_forum_engagement.html" class="text-text-primary hover:text-primary transition-colors">
+                        <span class="flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                            </svg>
+                            Forum
+                        </span>
+                    </a>
+                    <a href="village_leadership_contact.html" class="text-text-primary hover:text-primary transition-colors">
+                        <span class="flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                            </svg>
+                            Kontak
+                        </span>
+                    </a>
+                </nav>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-text-primary hover:text-primary" onclick="toggleMobileMenu()">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-surface-300">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="homepage_village_digital_hub.html" class="block px-3 py-2 text-text-primary hover:text-primary hover:bg-surface-100 rounded-md">Beranda</a>
+                <a href="village_profile_heritage.html" class="block px-3 py-2 text-primary font-semibold bg-primary/10 rounded-md">Profil Desa</a>
+                <a href="news_announcements_center.html" class="block px-3 py-2 text-text-primary hover:text-primary hover:bg-surface-100 rounded-md">Berita</a>
+                <a href="cultural_heritage_gallery.html" class="block px-3 py-2 text-text-primary hover:text-primary hover:bg-surface-100 rounded-md">Budaya</a>
+                <a href="community_forum_engagement.html" class="block px-3 py-2 text-text-primary hover:text-primary hover:bg-surface-100 rounded-md">Forum</a>
+                <a href="village_leadership_contact.html" class="block px-3 py-2 text-text-primary hover:text-primary hover:bg-surface-100 rounded-md">Kontak</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Village Overview -->
+    <section class="relative h-80 md:h-96 overflow-hidden">
+        <img src="https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Pemandangan Desa Ngrawan" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+        <div class="absolute inset-0 bg-black/50"></div>
+        <div class="absolute inset-0 flex items-center justify-center">
+            <div class="text-center text-white px-4">
+                <h1 class="text-4xl md:text-6xl font-accent font-bold mb-4">Desa Ngrawan</h1>
+                <p class="text-lg md:text-xl mb-2">Kecamatan Ngrawan, Kabupaten Jawa Tengah</p>
+                <p class="text-base md:text-lg opacity-90">Didirikan tahun 1923 • Luas 847 Ha • Penduduk 3.247 Jiwa</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Village Statistics -->
+    <section class="py-12 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-inter font-bold text-primary mb-4">Statistik Desa</h2>
+                <p class="text-text-secondary text-lg">Data terkini kondisi demografis dan geografis Desa Ngrawan</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Population -->
+                <div class="card text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-inter font-semibold text-primary mb-2">Jumlah Penduduk</h3>
+                    <p class="text-3xl font-bold text-accent mb-1">3.247</p>
+                    <p class="text-text-secondary text-sm">Jiwa (Juli 2025)</p>
+                </div>
+
+                <!-- Area -->
+                <div class="card text-center">
+                    <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-inter font-semibold text-primary mb-2">Luas Wilayah</h3>
+                    <p class="text-3xl font-bold text-secondary mb-1">847</p>
+                    <p class="text-text-secondary text-sm">Hektar</p>
+                </div>
+
+                <!-- Households -->
+                <div class="card text-center">
+                    <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-inter font-semibold text-primary mb-2">Kepala Keluarga</h3>
+                    <p class="text-3xl font-bold text-accent mb-1">892</p>
+                    <p class="text-text-secondary text-sm">KK</p>
+                </div>
+
+                <!-- Villages -->
+                <div class="card text-center">
+                    <div class="w-16 h-16 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-success" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-inter font-semibold text-primary mb-2">Dusun</h3>
+                    <p class="text-3xl font-bold text-success mb-1">5</p>
+                    <p class="text-text-secondary text-sm">Wilayah</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Village History & Foundation -->
+    <section class="py-12 bg-background">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- History Content -->
+                <div>
+                    <h2 class="text-3xl font-inter font-bold text-primary mb-6">Sejarah Pendirian Desa</h2>
+                    <div class="space-y-6">
+                        <div class="cultural-accent">
+                            <h3 class="text-xl font-inter font-semibold text-primary mb-3">Awal Mula (1923)</h3>
+                            <p class="text-text-secondary">Desa Ngrawan didirikan pada tahun 1923 oleh sekelompok petani yang bermigrasi dari daerah Yogyakarta. Nama "Ngrawan" berasal dari bahasa Jawa yang berarti "tempat yang subur dan damai", mencerminkan kondisi geografis yang ideal untuk pertanian padi dan palawija.</p>
+                        </div>
+                        
+                        <div class="border-l-4 border-secondary pl-6">
+                            <h3 class="text-xl font-inter font-semibold text-primary mb-3">Era Kemerdekaan (1945-1960)</h3>
+                            <p class="text-text-secondary">Pasca kemerdekaan Indonesia, Desa Ngrawan menjadi salah satu desa percontohan dalam program swasembada pangan di Jawa Tengah. Masyarakat bergotong royong membangun sistem irigasi tradisional yang masih berfungsi hingga kini.</p>
+                        </div>
+                        
+                        <div class="border-l-4 border-accent pl-6">
+                            <h3 class="text-xl font-inter font-semibold text-primary mb-3">Modernisasi (1980-Sekarang)</h3>
+                            <p class="text-text-secondary">Memasuki era reformasi, Desa Ngrawan mulai mengembangkan sektor pariwisata budaya dan ekonomi kreatif sambil tetap mempertahankan identitas sebagai desa agraris yang kuat dengan nilai-nilai tradisional Jawa.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Historical Images -->
+                <div class="space-y-4">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="https://images.pixabay.com/photo/2019/08/15/15/19/indonesia-4408021_1280.jpg" alt="Foto Sejarah Desa Ngrawan" class="w-full h-64 object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div class="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-4">
+                            <p class="text-sm font-semibold">Upacara Tradisional Slametan Desa (1960)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="relative overflow-hidden rounded-lg">
+                            <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Gotong Royong Masa Lalu" class="w-full h-32 object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                            <div class="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-2">
+                                <p class="text-xs">Gotong Royong 1975</p>
+                            </div>
+                        </div>
+                        <div class="relative overflow-hidden rounded-lg">
+                            <img src="https://images.pexels.com/photos/2382681/pexels-photo-2382681.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Sawah Tradisional" class="w-full h-32 object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                            <div class="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-2">
+                                <p class="text-xs">Sawah Bersejarah</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Village Elders & Oral History -->
+    <section class="py-12 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-inter font-bold text-primary mb-4">Sesepuh Desa & Cerita Turun Temurun</h2>
+                <p class="text-text-secondary text-lg">Mendengarkan kebijaksanaan dari para tetua yang menjaga warisan budaya</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Elder 1 -->
+                <div class="card group hover:shadow-elevated transition-all duration-300">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Mbah Suroto" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div class="absolute top-3 left-3">
+                            <span class="bg-accent text-white text-xs px-2 py-1 rounded-full">Sesepuh Desa</span>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-inter font-semibold text-primary mb-2">Mbah Suroto (87 tahun)</h3>
+                    <p class="text-text-secondary text-sm mb-4">"Dulu, air sungai Ngrawan jernih sekali. Kami mandi, mencuci, dan mengambil air minum dari sana. Sekarang alhamdulillah sudah ada sumur bor, tapi sungai tetap jadi tempat bermain anak-anak."</p>
+                    <div class="flex items-center text-secondary text-sm">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        Pendiri Kelompok Tani
+                    </div>
+                </div>
+
+                <!-- Elder 2 -->
+                <div class="card group hover:shadow-elevated transition-all duration-300">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bu Saminah" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div class="absolute top-3 left-3">
+                            <span class="bg-secondary text-white text-xs px-2 py-1 rounded-full">Pengrajin Batik</span>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-inter font-semibold text-primary mb-2">Bu Saminah (73 tahun)</h3>
+                    <p class="text-text-secondary text-sm mb-4">"Motif batik Ngrawan itu unik, ada gambar padi dan burung pipit. Artinya kemakmuran dan kerukunan. Saya sudah mengajarkan ke cucu-cucu supaya tidak hilang."</p>
+                    <div class="flex items-center text-accent text-sm">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"/>
+                        </svg>
+                        Maestro Batik Tulis
+                    </div>
+                </div>
+
+                <!-- Elder 3 -->
+                <div class="card group hover:shadow-elevated transition-all duration-300">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616_1280.jpg" alt="Pak Karno" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div class="absolute top-3 left-3">
+                            <span class="bg-primary text-white text-xs px-2 py-1 rounded-full">Dalang</span>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-inter font-semibold text-primary mb-2">Pak Karno (69 tahun)</h3>
+                    <p class="text-text-secondary text-sm mb-4">"Setiap Selasa Kliwon, kami mengadakan wayang kulit di balai desa. Ceritanya selalu tentang kebaikan mengalahkan kejahatan, mengajarkan budi pekerti pada generasi muda."</p>
+                    <div class="flex items-center text-primary text-sm">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        Dalang Wayang Kulit
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Economic Profile & Local Products -->
+    <section class="py-12 bg-background">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-inter font-bold text-primary mb-4">Profil Ekonomi Desa</h2>
+                <p class="text-text-secondary text-lg">Kekayaan alam dan produk unggulan yang menjadi kebanggaan warga</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Agricultural Products -->
+                <div>
+                    <h3 class="text-2xl font-inter font-semibold text-primary mb-6">Produk Pertanian Unggulan</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-16 h-16 bg-secondary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-8 h-8 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-inter font-semibold text-primary mb-2">Beras Premium Ngrawan</h4>
+                                <p class="text-text-secondary text-sm mb-2">Varietas IR64 dan Ciherang dengan kualitas terbaik. Produksi mencapai 2.400 ton per tahun dengan sistem irigasi teknis yang baik.</p>
+                                <div class="flex items-center text-secondary text-sm">
+                                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    Sertifikat Organik
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-16 h-16 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-inter font-semibold text-primary mb-2">Jagung Manis Organik</h4>
+                                <p class="text-text-secondary text-sm mb-2">Jagung manis varietas Bonanza yang ditanam tanpa pestika kimia. Dipasarkan ke pasar tradisional dan supermarket di kota.</p>
+                                <div class="flex items-center text-accent text-sm">
+                                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                                    </svg>
+                                    Omzet Rp 180 juta/tahun
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-inter font-semibold text-primary mb-2">Sayuran Hidroponik</h4>
+                                <p class="text-text-secondary text-sm mb-2">Kangkung, selada, dan bayam hidroponik yang dikelola kelompok tani muda. Menggunakan teknologi modern untuk hasil maksimal.</p>
+                                <div class="flex items-center text-primary text-sm">
+                                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clip-rule="evenodd"/>
+                                    </svg>
+                                    Inovasi Pertanian
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Traditional Crafts -->
+                <div>
+                    <h3 class="text-2xl font-inter font-semibold text-primary mb-6">Kerajinan Tradisional</h3>
+                    <div class="space-y-4">
+                        <div class="card">
+                            <div class="flex items-center space-x-4">
+                                <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Batik Ngrawan" class="w-16 h-16 object-cover rounded-lg" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                <div>
+                                    <h4 class="font-inter font-semibold text-primary">Batik Tulis Ngrawan</h4>
+                                    <p class="text-text-secondary text-sm">Motif khas dengan filosofi kemakmuran</p>
+                                    <p class="text-accent text-sm font-semibold">15 pengrajin aktif</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="flex items-center space-x-4">
+                                <img src="https://images.pixabay.com/photo/2017/08/10/08/47/construction-2619546_1280.jpg" alt="Anyaman Bambu" class="w-16 h-16 object-cover rounded-lg" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                <div>
+                                    <h4 class="font-inter font-semibold text-primary">Anyaman Bambu</h4>
+                                    <p class="text-text-secondary text-sm">Keranjang, tas, dan peralatan rumah tangga</p>
+                                    <p class="text-secondary text-sm font-semibold">8 pengrajin aktif</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="flex items-center space-x-4">
+                                <img src="https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Keramik Tradisional" class="w-16 h-16 object-cover rounded-lg" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                <div>
+                                    <h4 class="font-inter font-semibold text-primary">Keramik Gerabah</h4>
+                                    <p class="text-text-secondary text-sm">Pot tanaman dan peralatan dapur tradisional</p>
+                                    <p class="text-primary text-sm font-semibold">5 pengrajin aktif</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Village Achievements -->
+    <section class="py-12 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-inter font-bold text-primary mb-4">Prestasi & Penghargaan</h2>
+                <p class="text-text-secondary text-lg">Pencapaian yang membanggakan dari berbagai bidang pembangunan</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Achievement 1 -->
+                <div class="card group hover:shadow-elevated transition-all duration-300">
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-10 h-10 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-inter font-semibold text-primary mb-2">Desa Wisata Terbaik</h3>
+                        <p class="text-text-secondary text-sm mb-3">Juara 1 Lomba Desa Wisata Tingkat Kabupaten Jawa Tengah 2024</p>
+                        <div class="flex items-center justify-center text-accent text-sm">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                            </svg>
+                            Desember 2024
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Achievement 2 -->
+                <div class="card group hover:shadow-elevated transition-all duration-300">
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-10 h-10 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-inter font-semibold text-primary mb-2">Desa Mandiri Pangan</h3>
+                        <p class="text-text-secondary text-sm mb-3">Sertifikat Desa Mandiri Pangan dari Kementerian Pertanian RI</p>
+                        <div class="flex items-center justify-center text-secondary text-sm">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                            </svg>
+                            Maret 2024
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Achievement 3 -->
+                <div class="card group hover:shadow-elevated transition-all duration-300">
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-10 h-10 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-inter font-semibold text-primary mb-2">Desa Sehat</h3>
+                        <p class="text-text-secondary text-sm mb-3">Penghargaan Desa Sehat dari Dinas Kesehatan Provinsi Jawa Tengah</p>
+                        <div class="flex items-center justify-center text-primary text-sm">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                            </svg>
+                            Agustus 2023
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Village Map -->
+    <section class="py-12 bg-background">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-inter font-bold text-primary mb-4">Peta Interaktif Desa</h2>
+                <p class="text-text-secondary text-lg">Jelajahi wilayah dan fasilitas penting di Desa Ngrawan</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Map Placeholder -->
+                <div class="lg:col-span-2">
+                    <div class="card">
+                        <div class="relative bg-surface-200 rounded-lg h-96 flex items-center justify-center">
+                            <div class="text-center">
+                                <svg class="w-16 h-16 text-primary mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                </svg>
+                                <h3 class="text-lg font-inter font-semibold text-primary mb-2">Peta Desa Ngrawan</h3>
+                                <p class="text-text-secondary text-sm">Klik pada titik-titik untuk melihat informasi detail</p>
+                            </div>
+                            
+                            <!-- Map Points -->
+                            <div class="absolute top-1/4 left-1/3 w-4 h-4 bg-accent rounded-full cursor-pointer hover:scale-125 transition-transform" title="Balai Desa"></div>
+                            <div class="absolute top-1/2 right-1/4 w-4 h-4 bg-secondary rounded-full cursor-pointer hover:scale-125 transition-transform" title="Sawah Utama"></div>
+                            <div class="absolute bottom-1/3 left-1/4 w-4 h-4 bg-primary rounded-full cursor-pointer hover:scale-125 transition-transform" title="Pasar Tradisional"></div>
+                            <div class="absolute top-1/3 right-1/3 w-4 h-4 bg-success rounded-full cursor-pointer hover:scale-125 transition-transform" title="Sekolah Dasar"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map Legend & Info -->
+                <div class="space-y-6">
+                    <div class="card">
+                        <h3 class="text-lg font-inter font-semibold text-primary mb-4">Keterangan Peta</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 bg-accent rounded-full mr-3"></div>
+                                <span class="text-sm text-text-primary">Fasilitas Pemerintahan</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 bg-secondary rounded-full mr-3"></div>
+                                <span class="text-sm text-text-primary">Area Pertanian</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 bg-primary rounded-full mr-3"></div>
+                                <span class="text-sm text-text-primary">Pusat Ekonomi</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 bg-success rounded-full mr-3"></div>
+                                <span class="text-sm text-text-primary">Fasilitas Pendidikan</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="text-lg font-inter font-semibold text-primary mb-4">Batas Wilayah</h3>
+                        <div class="space-y-2 text-sm text-text-secondary">
+                            <div><strong>Utara:</strong> Desa Karanganyar</div>
+                            <div><strong>Selatan:</strong> Desa Wonogiri</div>
+                            <div><strong>Timur:</strong> Desa Sukoharjo</div>
+                            <div><strong>Barat:</strong> Desa Klaten</div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="text-lg font-inter font-semibold text-primary mb-4">Koordinat GPS</h3>
+                        <div class="text-sm text-text-secondary">
+                            <div><strong>Latitude:</strong> -7.5678°</div>
+                            <div><strong>Longitude:</strong> 110.8234°</div>
+                            <div><strong>Ketinggian:</strong> 156 mdpl</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Traditional Recipes & Cultural Knowledge -->
+    <section class="py-12 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-inter font-bold text-primary mb-4">Resep Tradisional & Kearifan Lokal</h2>
+                <p class="text-text-secondary text-lg">Warisan kuliner dan pengetahuan yang diturunkan dari generasi ke generasi</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Traditional Recipes -->
+                <div>
+                    <h3 class="text-2xl font-inter font-semibold text-primary mb-6">Kuliner Khas Ngrawan</h3>
+                    <div class="space-y-6">
+                        <div class="cultural-accent">
+                            <div class="flex items-start space-x-4">
+                                <img src="https://images.pexels.com/photos/2382681/pexels-photo-2382681.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Gudeg Ngrawan" class="w-20 h-20 object-cover rounded-lg flex-shrink-0" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                <div>
+                                    <h4 class="text-lg font-inter font-semibold text-primary mb-2">Gudeg Ngrawan</h4>
+                                    <p class="text-text-secondary text-sm mb-2">Gudeg khas dengan tambahan tempe benguk dan sambal krecek yang pedas manis. Dimasak dengan kayu bakar selama 8 jam.</p>
+                                    <div class="flex items-center text-accent text-sm">
+                                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                        </svg>
+                                        Resep Turun Temurun
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border-l-4 border-secondary pl-6">
+                            <div class="flex items-start space-x-4">
+                                <img src="https://images.pixabay.com/photo/2019/08/15/15/19/indonesia-4408021_1280.jpg" alt="Tahu Tempe Bacem" class="w-20 h-20 object-cover rounded-lg flex-shrink-0" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                <div>
+                                    <h4 class="text-lg font-inter font-semibold text-primary mb-2">Tahu Tempe Bacem</h4>
+                                    <p class="text-text-secondary text-sm mb-2">Tahu dan tempe yang dibacem dengan bumbu lengkap, gula jawa, dan daun salam. Makanan wajib saat acara hajatan.</p>
+                                    <div class="flex items-center text-secondary text-sm">
+                                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Menu Hajatan
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border-l-4 border-primary pl-6">
+                            <div class="flex items-start space-x-4">
+                                <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Wedang Ronde" class="w-20 h-20 object-cover rounded-lg flex-shrink-0" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                <div>
+                                    <h4 class="text-lg font-inter font-semibold text-primary mb-2">Wedang Ronde Ngrawan</h4>
+                                    <p class="text-text-secondary text-sm mb-2">Minuman hangat dengan ronde isi kacang tanah, disajikan dengan kolang-kaling dan mutiara. Cocok untuk malam hari.</p>
+                                    <div class="flex items-center text-primary text-sm">
+                                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"/>
+                                        </svg>
+                                        Minuman Tradisional
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cultural Knowledge -->
+                <div>
+                    <h3 class="text-2xl font-inter font-semibold text-primary mb-6">Kearifan Lokal</h3>
+                    <div class="space-y-6">
+                        <div class="card">
+                            <h4 class="text-lg font-inter font-semibold text-primary mb-3">Pranata Mangsa</h4>
+                            <p class="text-text-secondary text-sm mb-3">Sistem penanggalan tradisional Jawa untuk menentukan waktu tanam dan panen berdasarkan pergerakan bintang dan cuaca.</p>
+                            <div class="bg-surface-100 rounded-lg p-3">
+                                <p class="text-text-primary text-sm"><strong>Mangsa Kasa (Juni-Juli):</strong> Waktu terbaik menanam padi</p>
+                                <p class="text-text-primary text-sm"><strong>Mangsa Karo (Juli-Agustus):</strong> Perawatan intensif tanaman</p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <h4 class="text-lg font-inter font-semibold text-primary mb-3">Gotong Royong</h4>
+                            <p class="text-text-secondary text-sm mb-3">Tradisi kerja sama dalam berbagai kegiatan desa, mulai dari pembangunan infrastruktur hingga acara hajatan warga.</p>
+                            <div class="flex items-center text-secondary text-sm">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                                </svg>
+                                Setiap Minggu Pagi
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <h4 class="text-lg font-inter font-semibold text-primary mb-3">Slametan Desa</h4>
+                            <p class="text-text-secondary text-sm mb-3">Upacara adat untuk memohon keselamatan dan kemakmuran desa yang dilakukan setiap tahun pada bulan Suro.</p>
+                            <div class="flex items-center text-accent text-sm">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                                </svg>
+                                15 Muharram
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <h4 class="text-lg font-inter font-semibold text-primary mb-3">Tembang Dolanan</h4>
+                            <p class="text-text-secondary text-sm mb-3">Lagu-lagu tradisional anak-anak yang mengandung nilai pendidikan dan hiburan, masih diajarkan di sekolah dasar.</p>
+                            <div class="bg-accent/10 rounded-lg p-3">
+                                <p class="text-text-primary text-sm italic">"Sluku-sluku bathok, bathoke ela-elo..."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Village Development Goals -->
+    <section class="py-12 bg-background">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-inter font-bold text-primary mb-4">Visi & Misi Pembangunan</h2>
+                <p class="text-text-secondary text-lg">Rencana strategis untuk kemajuan Desa Ngrawan 2025-2030</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Vision -->
+                <div class="card">
+                    <div class="text-center mb-6">
+                        <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-10 h-10 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                                <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-inter font-bold text-primary mb-4">VISI</h3>
+                    </div>
+                    <div class="cultural-accent text-center">
+                        <p class="text-lg font-accent font-semibold text-primary leading-relaxed">
+                            "Terwujudnya Desa Ngrawan sebagai Desa Wisata Budaya yang Mandiri, Sejahtera, dan Berkarakter Berdasarkan Nilai-Nilai Pancasila"
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Mission -->
+                <div class="card">
+                    <div class="text-center mb-6">
+                        <div class="w-20 h-20 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-10 h-10 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-inter font-bold text-primary mb-4">MISI</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-accent rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-white text-xs font-bold">1</span>
+                            </div>
+                            <p class="text-text-primary text-sm">Mengembangkan potensi wisata budaya berbasis kearifan lokal dan tradisi Jawa</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-accent rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-white text-xs font-bold">2</span>
+                            </div>
+                            <p class="text-text-primary text-sm">Meningkatkan kesejahteraan masyarakat melalui pengembangan ekonomi kreatif dan UMKM</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-accent rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-white text-xs font-bold">3</span>
+                            </div>
+                            <p class="text-text-primary text-sm">Melestarikan budaya dan tradisi lokal untuk generasi mendatang</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-accent rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-white text-xs font-bold">4</span>
+                            </div>
+                            <p class="text-text-primary text-sm">Membangun infrastruktur desa yang mendukung kemajuan dan kenyamanan warga</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-accent rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-white text-xs font-bold">5</span>
+                            </div>
+                            <p class="text-text-primary text-sm">Meningkatkan kualitas sumber daya manusia melalui pendidikan dan pelatihan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-12 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-inter font-bold mb-4">Mari Bersama Membangun Desa Ngrawan</h2>
+            <p class="text-primary-100 text-lg mb-8">Bergabunglah dalam forum komunitas untuk berbagi ide dan berpartisipasi dalam pembangunan desa</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="community_forum_engagement.html" class="btn-accent">Bergabung Forum Komunitas</a>
+                <a href="cultural_heritage_gallery.html" class="bg-white text-primary px-6 py-3 rounded-lg font-inter font-semibold hover:bg-primary-50 transition-colors">Lihat Galeri Budaya</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-primary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Village Info -->
+                <div>
+                    <div class="flex items-center mb-4">
+                        <svg class="h-8 w-8 text-accent mr-3" viewBox="0 0 40 40" fill="currentColor">
+                            <path d="M20 2L4 8v12c0 11 7.6 21.3 16 24 8.4-2.7 16-13 16-24V8L20 2zm0 6l12 4.5v9.5c0 8.5-5.8 16.5-12 18.5-6.2-2-12-10-12-18.5v-9.5L20 8z"/>
+                            <circle cx="20" cy="18" r="6" fill="currentColor"/>
+                            <path d="M16 16h8v4h-8z" fill="white"/>
+                        </svg>
+                        <div>
+                            <h3 class="text-lg font-inter font-bold">Desa Ngrawan</h3>
+                            <p class="text-sm text-gray-300">Portal Digital</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm">Membangun desa yang maju dengan tetap menjaga nilai-nilai tradisional dan kearifan lokal.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-inter font-semibold mb-4">Tautan Cepat</h4>
+                    <ul class="space-y-2">
+                        <li><a href="village_profile_heritage.html" class="text-gray-300 hover:text-accent transition-colors text-sm">Profil Desa</a></li>
+                        <li><a href="news_announcements_center.html" class="text-gray-300 hover:text-accent transition-colors text-sm">Berita Terkini</a></li>
+                        <li><a href="cultural_heritage_gallery.html" class="text-gray-300 hover:text-accent transition-colors text-sm">Galeri Budaya</a></li>
+                        <li><a href="community_forum_engagement.html" class="text-gray-300 hover:text-accent transition-colors text-sm">Forum Komunitas</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-lg font-inter font-semibold mb-4">Layanan</h4>
+                    <ul class="space-y-2">
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-accent transition-colors text-sm">Surat Keterangan</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-accent transition-colors text-sm">Izin Usaha</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-accent transition-colors text-sm">Pengaduan Online</a></li>
+                        <li><a href="village_leadership_contact.html" class="text-gray-300 hover:text-accent transition-colors text-sm">Kontak Perangkat</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-inter font-semibold mb-4">Kontak</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <svg class="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                            </svg>
+                            <p class="text-gray-300 text-sm">Jl. Raya Ngrawan No. 123<br />Kec. Ngrawan, Kab. Jawa Tengah<br />57XXX</p>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-accent mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                            </svg>
+                            <p class="text-gray-300 text-sm">(0271) 234-5678</p>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-accent mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                            </svg>
+                            <p class="text-gray-300 text-sm">info@desangrawan.id</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+                <p class="text-gray-300 text-sm">© 2025 Desa Ngrawan. Hak Cipta Dilindungi Undang-Undang.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add loading animation for images
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('load', function() {
+                this.style.opacity = '1';
+            });
+        });
+
+        // Interactive map points
+        document.querySelectorAll('[title]').forEach(point => {
+            point.addEventListener('click', function() {
+                const title = this.getAttribute('title');
+                alert(`Informasi tentang: ${title}\n\nFitur ini akan dikembangkan lebih lanjut untuk menampilkan detail lokasi.`);
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards for animation
+        document.querySelectorAll('.card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>
